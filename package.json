@@ -15,11 +15,9 @@
     "@react-native-picker/picker": "^1.16.3",
     "@react-navigation/native": "^5.9.4",
     "@react-navigation/stack": "^5.14.5",
-    "file-system": "^1.2.2",
     "formik": "^2.2.9",
     "react": "17.0.1",
     "react-native": "0.64.2",
-    "react-native-fs": "^2.18.0",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-paper": "^4.9.2",
     "react-native-picker-select": "^8.0.4",
@@ -27,8 +25,7 @@
     "react-native-safe-area-context": "^3.2.0",
     "react-native-screens": "^3.4.0",
     "react-native-vector-icons": "^8.1.0",
-    "react-native-xml2js": "^1.0.3",
-    "react-xml-parser": "^1.1.8"
+    "react-native-xml2js": "^1.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
