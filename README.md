@@ -15,7 +15,7 @@ Fortitude Asia Hands-On Test – A daily recipe sharing apps
 #### Run Apps locally.
 
 1. Run `git clone https://github.com/nurizzatiabdharis/DailyRecipeApp.git`
-2. Open a terminal window in the directory you cloned the repo, and do `cd DailyRecipeApps`
+2. Open a terminal window in the directory you cloned the repo, and do `cd DailyRecipeApp`
 3. Run `npm install`
 4. Run `cd ios && pod install && cd ..`
 5. Run `npx react-native start`
