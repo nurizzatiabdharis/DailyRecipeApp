@@ -1,0 +1,6 @@
+module Pods_DailyRecipeApp {
+  umbrella header "Pods-DailyRecipeApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
