@@ -19,7 +19,7 @@ Hands-On Test – A daily recipe sharing apps
 1. Run `git clone https://github.com/nurizzatiabdharis/DailyRecipeApp.git`
 2. Open a terminal window in the directory you cloned the repo, and do `cd DailyRecipeApp`
 3. Run `npm install`
-4. Run `cd ios && pod install && cd ..`
+4. Run `npx pod-install`
 5. Run `npx react-native start`
 6. Open new terminal run `npx react-native run-ios` for IOS and `npx react-native run-android` for android
 7. This Apps is also tested on real device both Android and iOS.
