@@ -1,6 +1,8 @@
 # Daily Recipe App in React Native
 
-Fortitude Asia Hands-On Test – A daily recipe sharing apps 
+FOURTITUDE ASIA	- React Native Application Developer
+
+Hands-On Test – A daily recipe sharing apps 
 
 ## Packages Used
 - [React Navigation](https://reactnavigation.org/)
