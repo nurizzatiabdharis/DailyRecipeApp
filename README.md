@@ -1,10 +1,6 @@
 # Daily Recipe App in React Native
 
-FOURTITUDE ASIA	- React Native Application Developer
-
-Hands-On Test – A daily recipe sharing apps 
-
-## Packages Used
+### Packages Used
 - [React Navigation](https://reactnavigation.org/)
 - [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
 - [React Native Picker Select](https://github.com/lawnstarter/react-native-picker-select)
@@ -14,7 +10,7 @@ Hands-On Test – A daily recipe sharing apps
 - [React Native Paper](https://callstack.github.io/react-native-paper/)
 
 
-#### Run Apps locally.
+#### Run Apps locally :
 
 1. Run `git clone https://github.com/nurizzatiabdharis/DailyRecipeApp.git`
 2. Open a terminal window in the directory you cloned the repo, and do `cd DailyRecipeApp`
@@ -27,3 +23,11 @@ Hands-On Test – A daily recipe sharing apps
 #### XML data files can be found here :
 - [recipetypes.xml](https://gist.github.com/nurizzatiabdharis/be208f776aa6f68493ec5125ff0bc79f/)
 - [recipelist.xml](https://gist.github.com/nurizzatiabdharis/b1cddb9d13766f9d36a1c3f31801eada)
+
+#### App Screen Preview :
+<p>
+<img src="assets/images/screen1.png" width="200">
+<img src="assets/images/screen2.png" width="200">
+<img src="assets/images/screen3.png" width="200">
+<img src="assets/images/screen4.png" width="200">
+</p>
