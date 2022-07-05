@@ -17,9 +17,10 @@ import { parseString } from 'react-native-xml2js';
 
 Icon.loadFont();
 
-const LoginScreen = ({ navigation }) => {
-    const [login, setLogin] = useState('')
+const RegisterScreen = ({ navigation }) => {
+    const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [username, setUsername] = useState('')
     const [secure, setSecure] = useState(true);
     const [recipeList, setRecipeList] = useState([]);
     const [isLoading, setLoading] = useState(true);
@@ -27,72 +28,18 @@ const LoginScreen = ({ navigation }) => {
     useEffect(() => {
         let unmounted = false;
         (async () => {
-            getUser();
-            requestRecipeData();
+            // getUser();
+            // requestRecipeData();
         })();
         return () => {
             unmounted = true;
         };
     }, []);
 
-    const logIn = async (values) => {
-        try {
-            await AsyncStorage.setItem('login', values.login)
-            await AsyncStorage.setItem('password', values.password)
-            navigation.navigate('Home')
-        } catch (err) {
-            console.log(err)
-        }
+    const register = (values) => {
+        console.log('register', values)
     }
 
-    const getUser = async () => {
-        try {
-            const login = await AsyncStorage.getItem('login')
-            const password = await AsyncStorage.getItem('password')
-            if (login !== null) {
-                setLogin(login)
-            }
-            if (password !== null) {
-                setPassword(password)
-            }
-        } catch (err) {
-            console.log(err)
-        }
-    }
-
-    const requestRecipeData = async () => {
-        {/** Request All Recipe Data */ }
-        var listRecepiUrl = 'https://gist.githubusercontent.com/nurizzatiabdharis/b1cddb9d13766f9d36a1c3f31801eada/raw/ca620420eec4d8b05cdbc8a670ed8f0f2ff6b2de/recipelist.xml'
-        await fetch(listRecepiUrl)
-            .then((response) => response.text())
-            .then(async (responseText) => {
-                let myArray = [];
-                parseString(responseText, (_, result) => {
-                    result.cookbook.recipe.map((item, index) => {
-                        let recipe = {
-                            id: index,
-                            title: item["title"][0],
-                            description: item["description"][0],
-                            time: item["time"][0],
-                            image: item["image"][0]["$"]["url"],
-                            type: item["type"][0],
-                            serving: item["serving"][0],
-                            author: item["author"][0],
-                            ratings: item["ratings"][0],
-                            reviews: item["reviews"][0],
-                            ingredients: item["ingredients"][0]["label"],
-                            directions: item["directions"][0]["step"],
-                        }
-                        myArray.push(recipe);
-                    })
-                });
-                await AsyncStorage.setItem('@listRecipe', JSON.stringify(myArray));
-            })
-            .catch((error) => {
-                console.log('Error fetching : ', error);
-            })
-            .finally(() => setLoading(false));
-    }
 
     return (
         <View style={styles.container}>
@@ -102,27 +49,38 @@ const LoginScreen = ({ navigation }) => {
                     behavior={Platform.OS === "ios" ? "padding" : "height"}
                 >
                     <Text style={styles.title}>
-                        Daily Recipe
+                        Register
                     </Text>
                     <Text style={styles.subtitle}>
-                        Cooking is now easy
+                        Create your account
                     </Text>
 
                     <Formik
                         enableReinitialize={true}
-                        initialValues={{ login: login, password: password }}
-                        onSubmit={values => { logIn(values) }}
+                        initialValues={{ username: username, email: email, password: password }}
+                        onSubmit={values => { register(values) }}
                     >
                         {({ handleChange, handleSubmit, values }) => (
                             <>
                                 <View style={styles.inputWrapper}>
                                     <Icon name="account-outline" size={25} color={colors.placeholderColor} />
                                     <TextInput
-                                        value={values.login}
+                                        value={values.username}
+                                        placeholder="Username"
+                                        placeholderTextColor={colors.placeholderColor}
+                                        style={styles.input}
+                                        onChangeText={handleChange('username')}
+                                        autoCorrect={false}
+                                    />
+                                </View>
+                                <View style={styles.inputWrapper}>
+                                    <Icon name="email-outline" size={25} color={colors.placeholderColor} />
+                                    <TextInput
+                                        value={values.email}
                                         placeholder="Email"
                                         placeholderTextColor={colors.placeholderColor}
                                         style={styles.input}
-                                        onChangeText={handleChange('login')}
+                                        onChangeText={handleChange('email')}
                                         autoCorrect={false}
                                     />
                                 </View>
@@ -145,21 +103,21 @@ const LoginScreen = ({ navigation }) => {
                                 </View>
                                 <TouchableOpacity style={styles.button} onPress={handleSubmit}>
                                     <Text style={styles.labelBtn}>
-                                        Login
+                                        Register
                                     </Text>
                                 </TouchableOpacity>
                             </>
                         )}
                     </Formik>
-
                     <View style={styles.footerWrapper}>
-                        <Text style={styles.footerLabel}>Don't have an account? </Text>
-                        <TouchableOpacity onPress={() => navigation.navigate('Register')}>
-                            <Text style={[styles.footerLabel, { fontWeight: '900', }]}>Sign Up</Text>
+                        <Text style={styles.footerLabel}>Already have an account? </Text>
+                        <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+                            <Text style={[styles.footerLabel, { fontWeight: '900', }]}>Sign in</Text>
                         </TouchableOpacity>
                     </View>
                 </KeyboardAvoidingView>
             </ImageBackground>
+
         </View>
     )
 
@@ -231,4 +189,4 @@ const styles = StyleSheet.create({
         fontSize: 16
     },
 });
-export default LoginScreen
+export default RegisterScreen
