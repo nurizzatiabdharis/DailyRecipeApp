@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "282784608854",
+    "project_id": "dailyrecipe-f0c35",
+    "storage_bucket": "dailyrecipe-f0c35.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:282784608854:android:2fbd238b1ecc4c725641f7",
+        "android_client_info": {
+          "package_name": "com.dailyrecipeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "282784608854-n26vtkilrhbpctko1rdbqe9he7mjb3qk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuHZDXV6oEfmZ3sZ_xDVitJMLnLTg6CNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "282784608854-n26vtkilrhbpctko1rdbqe9he7mjb3qk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "282784608854-j57q32t81iphb4jglteb0m0vfjigeh4j.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.DailyRecipeApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

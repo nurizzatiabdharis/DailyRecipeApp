@@ -155,7 +155,7 @@ const LoginScreen = ({ navigation }) => {
                     <View style={styles.footerWrapper}>
                         <Text style={styles.footerLabel}>Don't have an account? </Text>
                         <TouchableOpacity onPress={() => navigation.navigate('Register')}>
-                            <Text style={[styles.footerLabel, { fontWeight: '900', }]}>Sign Up</Text>
+                            <Text style={[styles.footerLabel, { fontWeight: 'bold' }]}>Sign Up</Text>
                         </TouchableOpacity>
                     </View>
                 </KeyboardAvoidingView>

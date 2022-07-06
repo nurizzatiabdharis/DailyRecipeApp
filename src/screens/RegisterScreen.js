@@ -112,7 +112,7 @@ const RegisterScreen = ({ navigation }) => {
                     <View style={styles.footerWrapper}>
                         <Text style={styles.footerLabel}>Already have an account? </Text>
                         <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-                            <Text style={[styles.footerLabel, { fontWeight: '900', }]}>Sign in</Text>
+                            <Text style={[styles.footerLabel, { fontWeight: 'bold' }]}>Sign in</Text>
                         </TouchableOpacity>
                     </View>
                 </KeyboardAvoidingView>
