@@ -9,9 +9,10 @@
 - [AsyncStorage](https://react-native-async-storage.github.io/async-storage/docs/install/)
 - [React Native Paper](https://callstack.github.io/react-native-paper/)
 
-Front End : React Native, Firebase Auth
-Back End : Express NodeJs
-Database : MongoDB, Asyncstorage
+#### Stack :
+Front End : React Native, Firebase Auth  <br/>
+Back End : Express NodeJs  <br/>
+Database : MongoDB, Asyncstorage  <br/>
 
 #### Run Apps locally :
 
@@ -29,8 +30,8 @@ Database : MongoDB, Asyncstorage
 
 #### App Screen Preview :
 <p>
-<img src="assets/images/screen1.png" width="200">
-<img src="assets/images/screen2.png" width="200">
-<img src="assets/images/screen3.png" width="200">
-<img src="assets/images/screen4.png" width="200">
+<img src="client/assets/images/screen1.png" width="200">
+<img src="client/assets/images/screen2.png" width="200">
+<img src="client/assets/images/screen3.png" width="200">
+<img src="client/assets/images/screen4.png" width="200">
 </p>
