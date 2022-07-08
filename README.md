@@ -9,6 +9,9 @@
 - [AsyncStorage](https://react-native-async-storage.github.io/async-storage/docs/install/)
 - [React Native Paper](https://callstack.github.io/react-native-paper/)
 
+Front End : React Native, Firebase Auth
+Back End : Express NodeJs
+Database : MongoDB, Asyncstorage
 
 #### Run Apps locally :
 
