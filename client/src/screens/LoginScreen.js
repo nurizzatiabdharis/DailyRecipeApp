@@ -15,6 +15,9 @@ import { Formik } from 'formik';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { parseString } from 'react-native-xml2js';
 
+import axios from 'axios';
+const baseUrl = 'http://localhost:3000';
+
 Icon.loadFont();
 
 const LoginScreen = ({ navigation }) => {
@@ -29,6 +32,9 @@ const LoginScreen = ({ navigation }) => {
         (async () => {
             getUser();
             requestRecipeData();
+            // fetch("/apiTest")
+            //     .then((res) => res.json())
+            //     .then((data) => setData(data.message));
         })();
         return () => {
             unmounted = true;
@@ -39,7 +45,20 @@ const LoginScreen = ({ navigation }) => {
         try {
             await AsyncStorage.setItem('login', values.login)
             await AsyncStorage.setItem('password', values.password)
+            // axios.get(`${baseUrl}/auth/apiTest`).then((response) => {
+            //     console.log('respond ===>');
+            //     console.log(response.data);
+            // });
+            // Backend API
+            // axios.post(`${baseUrl}/auth/login`, {
+            //     values
+            // }).then((response) => {
+            //     if (response.data.status = "login success") {
             navigation.navigate('Home')
+            //     } else {
+            //         console.log('error login')
+            //     }
+            // });
         } catch (err) {
             console.log(err)
         }
@@ -86,6 +105,7 @@ const LoginScreen = ({ navigation }) => {
                         myArray.push(recipe);
                     })
                 });
+                // console.log(myArray)
                 await AsyncStorage.setItem('@listRecipe', JSON.stringify(myArray));
             })
             .catch((error) => {
