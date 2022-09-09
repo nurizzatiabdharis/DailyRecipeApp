@@ -16,9 +16,9 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import RNPickerSelect from 'react-native-picker-select';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { parseString } from 'react-native-xml2js';
 import { Formik } from 'formik';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const addIngredient = () => '';
 
